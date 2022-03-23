@@ -60,7 +60,7 @@ async function retrieveAndSortPokemonInformation(pokemonList) {
 
 function createPokemonHTML(pokeInfo) {
     console.log('createPokemonHTML: rendering pokemon html')
-    const pokeHtml = pokeInfo.map((pokemon) => `<div id="pokemon-${pokemon.id}"><p><b>Name:</b> ${pokemon.name}</p><p><b>ID:</b> #${pokemon.id}</p><p><b>Type: </b>${pokemon.type}</p><img height=100px src=https://pokeres.bastionbot.org/images/pokemon/${pokemon.id}.png/></div><hr class=divider height=10px style='color:grey' />`).join('');
+    const pokeHtml = pokeInfo.map((pokemon) => `<div id="pokemon-${pokemon.id}"><p><b>Name:</b> ${pokemon.name}</p><p><b>ID:</b> #${pokemon.id}</p><p><b>Type: </b>${pokemon.type}</p><img height=100px src=https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png></div><hr class=divider height=10px style='color:grey' />`).join('');
     return pokeHtml;
 }
 
